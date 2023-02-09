@@ -2,3 +2,66 @@
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
 }
+
+body {
+  background: black;
+  color: white;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration-color: gray;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 1.5px;
+  transition: text-decoration-color 0.2s ease-in-out;
+}
+
+a:hover {
+  text-decoration-color: white;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 50px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 500px;
+  margin-bottom: 20px;
+}
+
+header img {
+  margin-right: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+header h1 {
+  margin: 0 0 25px;
+}
+
+header a {
+  text-transform: uppercase;
+  text-decoration-thickness: 20px;
+  text-underline-offset: 5px;
+}
+
+header a span::before {
+  content: '/';
+}
+
+header a span:not(:first-child) {
+  margin-left: 10px;
+}
+
+section {
+  width: 500px;
+}
