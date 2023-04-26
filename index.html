@@ -17,38 +17,158 @@
       <section>
         <h2>About me</h2>
         <p>
-          I am a software engineer who specializes in web development—currently at a stealth startup.
+          I am a software engineer who specializes in web development—currently
+          at a stealth startup.
         </p>
         <p>
-          From 2018–2019, I helped <a href="https://luke.hsiao.dev">Luke Hsiao</a> and <a href="https://linkedin.com/in/wusen">Sen Wu</a> with <a href="https://nicholaschiang.com/research">machine learning research</a> at <a href="https://sing.stanford.edu">Stanford University</a>.
+          From 2018–2019, I helped
+          <a href="https://luke.hsiao.dev">Luke Hsiao</a> and
+          <a href="https://linkedin.com/in/wusen">Sen Wu</a> with
+          <a href="https://nicholaschiang.com/research"
+            >machine learning research</a
+          >
+          at <a href="https://sing.stanford.edu">Stanford University</a>.
         </p>
         <p>
-          Starting in 2020, I worked on <a href="https://tutorbook.org">Tutorbook</a> to coordinate <a href="https://pausd.org">PAUSD</a>’s and <a href="https://schoolsimplified.org">School Simplified</a>’s peer tutoring programs.
+          Starting in 2020, I worked on
+          <a href="https://tutorbook.org">Tutorbook</a> to coordinate
+          <a href="https://pausd.org">PAUSD</a>’s and
+          <a href="https://schoolsimplified.org">School Simplified</a>’s peer
+          tutoring programs.
         </p>
         <p>
-          Last year, I developed <a href="https://readhammock.com">a newsletter reader</a> with two product people: <a href="https://martinsrna.com">Martin Srna</a> and <a href="https://twitter.com/JurajPal">Juraj Pal</a>.
+          Last year, I developed
+          <a href="https://readhammock.com">a newsletter reader</a> with two
+          product people: <a href="https://martinsrna.com">Martin Srna</a> and
+          <a href="https://twitter.com/JurajPal">Juraj Pal</a>.
         </p>
         <p>
-          I worked at <a href="https://roote.co">the Roote Foundation</a> building <a href="https://tweetscape.co">a Twitter client</a> with <a href="https://twitter.com/nicktorba">Nick Torba</a>, <a href="https://twitter.com/RhysLindmark">Rhys Lindmark</a>, and <a href="https://brendonwong.com">Brendon Wong</a>.
+          I worked at
+          <a href="https://roote.co">the Roote Foundation</a> building
+          <a href="https://tweetscape.co">a Twitter client</a> with
+          <a href="https://twitter.com/nicktorba">Nick Torba</a>,
+          <a href="https://twitter.com/RhysLindmark">Rhys Lindmark</a>, and
+          <a href="https://brendonwong.com">Brendon Wong</a>.
         </p>
         <p>
-          Currently, I am the solo front-end engineer for a venture funded ML startup based out of <a href="https://factoryhq.ai">Factory</a>.
+          Currently, I am the solo front-end engineer for a venture funded ML
+          startup based out of <a href="https://factoryhq.ai">Factory</a>.
         </p>
         <p>
-          Feel free to skim <a href="https://nicholaschiang.com/dark.pdf">my resume</a> or <a href="mailto:jobs@nicholaschiang.com">shoot me an email</a>.
+          Feel free to skim
+          <a href="https://nicholaschiang.com/dark.pdf">my resume</a> or
+          <a href="mailto:jobs@nicholaschiang.com">shoot me an email</a>.
         </p>
       </section>
       <section>
-        <h2>Start up project</h2>
-        <p>
-          This is where the description and link to my start up project will go.
-        </p>
+        <h2>
+          <a href="https://nicholas.engineering/products">Startup project</a>
+        </h2>
+        <article>
+          <h3>The Fashion Index</h3>
+          <p>
+            The ultimate goal of this project is to create an interface that I
+            can use to objectively rank and queue up high fashion purchases. I
+            want an organized browser of the world of fashion.
+          </p>
+          <h4>Ex: Top-down view of EVERYTHING about a product.</h4>
+          <p>
+            It would be super cool IMO to open a product page and, in addition
+            to seeing sizing, images, modeling, prices (from the various
+            retailers that stock said item), one could also see the designer who
+            made it (and easily see what else that designer has made and what
+            other companies that designer has worked for), the company that owns
+            the product's brand (and recent financial news regarding said
+            corporation), etc.
+          </p>
+          <h4>Ex: Product comparisons like Apple.</h4>
+          <p>
+            It could also be cool to be able to match up similar products from
+            different brands (as most brands' ready-to-wear collections will
+            typically follow similar trends and thus contain similar pieces) in
+            a side-by-side feature comparison view (similar to how you can
+            compare different Apple products before making a decision on which
+            one to buy): e.g. you could open up a Dior sweater and a GUCCI
+            sweater side-by-side and make your purchase decision not only based
+            on price or material sourcing or factory location or designer but
+            also by the brand's reputation index (a.k.a. if resale value might
+            increase) or a corporations climate change policies (or the lack
+            thereof).
+          </p>
+          <h3>Implementation</h3>
+          <p>
+            To implement features like that, I'll need a really good database
+            schema (see
+            <a href="https://github.com/nicholaschiang/site/pull/1">#1</a>). And
+            then all that needs to be done is:
+          </p>
+          <ul>
+            <li>
+              figuring out where and how to scrape all of this data (ideally I
+              want all past collections as well);
+            </li>
+            <li>
+              building a basic page-based application with all of this data
+              (perhaps using ISG from Next.js or similar).
+            </li>
+          </ul>
+          <h3>Pages</h3>
+          <p>
+            The initial MVP will only contain a few pages (see
+            <a href="https://github.com/nicholaschiang/site/pull/4">#4</a>):
+          </p>
+          <ul>
+            <li>
+              a basic <code>/products</code> page that lets users see a massive
+              list of all the products in our database (and filter them using
+              Linear style filters... filter sets can be saved as "views");
+            </li>
+            <li>
+              a <code>/products/{id}</code> page that lets users see all the
+              details of a particular product (prices, sizes, collections,
+              variants, brands, companies, countries, runway shows, etc);
+            </li>
+            <li>
+              a <code>/views</code> page that shows a list of the user's views
+              that they've saved from <code>/products</code> filters (these are
+              essentially just sets of filters);
+            </li>
+            <li>
+              a <code>/views/{id}</code> page that is the same as the
+              <code>/products</code> page but clicking the "Save" button updates
+              the view instead of creating a new view (and trying to navigate
+              away from the page after changing filters and not saving will
+              surface a warning asking the user if they'd like to save their
+              changes).
+            </li>
+          </ul>
+          <p>
+            The initial
+            <a
+              href="https://www.figma.com/file/ywAIsTAX7LPEKWpd0IpZtg/DRIP?node-id=1%3A3&t=G0xjG4AfLi1dUXMn-1"
+              >Figma mockup</a
+            >
+            of the <code>/products</code> page (inspired by Linear's issues
+            filtering features):
+          </p>
+          <img
+            src="https://user-images.githubusercontent.com/20798889/215310276-b55f86ef-1860-4910-bd1a-9d9af6dfa937.png"
+          />
+        </article>
       </section>
       <section>
-        <h2>Simon project</h2>
+        <h2><a href="https://simon.cs260.link">Simon project</a></h2>
         <p>
-          This is where the description and link to my implementation of the
-          Simon will go.
+          This project is a parody of the original game Simon by Milton-Bradley.
+          It is a very basic repetitive memory game where one follows the
+          demonstrated color sequence until one makes a mistake. The longer the
+          sequence one can repeat, the greater one's score becomes.
+        </p>
+        <p>
+          While building this example application, I felt quite limited by the
+          no-CSS and no-JS constraint; more so by the no-CSS constraint, however
+          (e.g. with SSR, you can get away with some pretty complex patterns all
+          without a line of JS running client-side).
         </p>
       </section>
       <section>
@@ -57,20 +177,24 @@
         <h3>HTML</h3>
         <ul>
           <li>
-            <a href="https://codepen.io/nicholaschiang/pen/wvxZPqg">Introduction</a>
+            <a href="https://codepen.io/nicholaschiang/pen/wvxZPqg"
+              >Introduction</a
+            >
             - Basic HTML page example
           </li>
           <li>
-            <a href="https://codepen.io/nicholaschiang/pen/abjxVYM">Structure</a> -
-            All the elements for creating page structure
+            <a href="https://codepen.io/nicholaschiang/pen/abjxVYM"
+              >Structure</a
+            >
+            - All the elements for creating page structure
           </li>
           <li>
-            <a href="https://codepen.io/nicholaschiang/pen/jOpRaxY">Input</a> - All
-            the elements for receiving user input
+            <a href="https://codepen.io/nicholaschiang/pen/jOpRaxY">Input</a> -
+            All the elements for receiving user input
           </li>
           <li>
-            <a href="https://codepen.io/nicholaschiang/pen/bGjJYjR">Media</a> - All
-            the elements for rendering media objects
+            <a href="https://codepen.io/nicholaschiang/pen/bGjJYjR">Media</a> -
+            All the elements for rendering media objects
           </li>
         </ul>
       </section>
